@@ -1,13 +1,7 @@
-/*----------------------------------------------------------------------
-	FILE        : CommandPrompt.java
-	AUTHOR      : Oğuz Karan
-	LAST UPDATE : 25.02.2024
-
-	General CommandPrompt class of REPL Framework
-
-	Copyleft (c) 1993 by C and System Programmers Association (CSD)
-	All Rights Free
------------------------------------------------------------------------*/
+/*
+ * Copyleft (c) 1993 by C and System Programmers Association (CSD)
+ * All Rights Free
+ */
 package com.karandev.io.util.console;
 
 import com.karandev.io.util.console.annotation.Command;
@@ -23,6 +17,23 @@ import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * The general {@code CommandPrompt} class provides a REPL (Read-Eval-Print Loop) framework
+ * for registering and executing console commands via reflection.
+ *
+ * <p>Commands are registered from an object whose methods are annotated with
+ * {@link Command}. An optional error command can be registered using {@link ErrorCommand}.
+ * The prompt, suffix, and error messages are configurable.
+ *
+ * <ul>
+ *   <li>Supports registering multiple commands and an error handler.</li>
+ *   <li>Validates that command parameters are all {@code String}.</li>
+ *   <li>Handles invalid commands and wrong argument counts gracefully.</li>
+ * </ul>
+ *
+ * @author JavaApp2-Jan-2024 Group
+ * @version 1.0.0
+ */
 @Builder
 public final class CommandPrompt {
     @Accessors(prefix = "m_")
@@ -125,6 +136,13 @@ public final class CommandPrompt {
         }
     }
 
+    /**
+     * Registers an object containing command methods.
+     * Scans for methods annotated with {@link Command} and {@link ErrorCommand}.
+     *
+     * @param regObject the object to register
+     * @return this {@code CommandPrompt} instance for chaining
+     */
     public CommandPrompt registerObject(Object regObject)
     {
         m_registerObject = regObject;
@@ -147,7 +165,10 @@ public final class CommandPrompt {
         return this;
     }
 
-
+    /**
+     * Starts the REPL loop, reading commands from the console and executing them.
+     * Handles blank input and exceptions.
+     */
     public void run()
     {
         try {
