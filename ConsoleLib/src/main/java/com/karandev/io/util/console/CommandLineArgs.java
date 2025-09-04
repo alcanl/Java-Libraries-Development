@@ -1,7 +1,3 @@
-/*
- * Copyleft (c) 1993 by C and System Programmers Association (CSD)
- * All Rights Free
- */
 package com.karandev.io.util.console;
 
 /**
@@ -12,8 +8,10 @@ package com.karandev.io.util.console;
  * If a check fails, an error message is printed and the application exits
  * with the specified exit code.
  *
- * @author JavaApp2-Jan-2024 Group
- * @version 1.0.0
+ * <p>Copyleft (c) 1993 by C and System Programmers Association (CSD)
+ * All Rights Free
+ *
+ * @author CSD Development Group
  */
 public final class CommandLineArgs {
     private CommandLineArgs()

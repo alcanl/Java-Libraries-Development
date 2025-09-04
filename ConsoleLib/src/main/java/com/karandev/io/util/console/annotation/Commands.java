@@ -1,7 +1,3 @@
-/*
- * Copyleft (c) 1993 by C and System Programmers Association (CSD)
- * All Rights Free
- */
 package com.karandev.io.util.console.annotation;
 
 import java.lang.annotation.*;
@@ -12,10 +8,12 @@ import java.lang.annotation.*;
  * <p>This annotation allows multiple {@code @Command} annotations to be applied
  * to a single method, enabling the method to be registered under multiple command names.
  *
+ * <p>Copyleft (c) 1993 by C and System Programmers Association (CSD)
+ * All Rights Free
+ *
  * @see Command
  *
- * @author JavaApp2-Jan-2024 Group
- * @version 1.0.0
+ * @author CSD Development Group
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)

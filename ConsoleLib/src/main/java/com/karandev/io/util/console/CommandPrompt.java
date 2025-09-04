@@ -1,7 +1,3 @@
-/*
- * Copyleft (c) 1993 by C and System Programmers Association (CSD)
- * All Rights Free
- */
 package com.karandev.io.util.console;
 
 import com.karandev.io.util.console.annotation.Command;
@@ -31,8 +27,10 @@ import java.util.Arrays;
  *   <li>Handles invalid commands and wrong argument counts gracefully.</li>
  * </ul>
  *
- * @author JavaApp2-Jan-2024 Group
- * @version 1.0.0
+ * <p>Copyleft (c) 1993 by C and System Programmers Association (CSD)
+ * All Rights Free
+ *
+ * @author CSD Development Group
  */
 @Builder
 public final class CommandPrompt {

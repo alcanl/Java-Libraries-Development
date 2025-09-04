@@ -1,7 +1,3 @@
-/*
- * Copyleft (c) 1993 by C and System Programmers Association (CSD)
- * All Rights Free
- */
 package com.karandev.io.util.console;
 
 import java.math.BigDecimal;
@@ -16,8 +12,10 @@ import java.util.Scanner;
  * from/to standard input, output, and error streams.
  * Includes error handling and formatting support.
  *
- * @author JavaApp2-Jan-2024 Group
- * @version 1.0.0
+ * <p>Copyleft (c) 1993 by C and System Programmers Association (CSD)
+ * All Rights Free
+ *
+ * @author CSD Development Group
  */
 public final class Console {
     private static final Scanner ms_kb;
@@ -122,7 +120,7 @@ public final class Console {
          */
         public static void write(float val)
         {
-            write("%d", val);
+            write("%f", val);
         }
 
         /**
@@ -232,7 +230,7 @@ public final class Console {
          */
         public static void writeLine(float val)
         {
-            writeLine("%d", val);
+            writeLine("%f", val);
         }
 
         /**
@@ -1560,7 +1558,7 @@ public final class Console {
      */
     public static void write(float val)
     {
-        write("%d", val);
+        write("%f", val);
     }
 
     /**
@@ -1704,7 +1702,7 @@ public final class Console {
      */
     public static void writeLine(float val)
     {
-        writeLine("%d", val);
+        writeLine("%f", val);
     }
 
     /**
