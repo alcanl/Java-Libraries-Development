@@ -1,20 +1,18 @@
-/*----------------------------------------------------------------------
-	FILE        : ErrorCommand.java
-	AUTHOR      : Oğuz Karan
-	LAST UPDATE : 24.02.2024
-
-	ErrorCommand annotation
-
-	Copyleft (c) 1993 by C and System Programmers Association (CSD)
-	All Rights Free
------------------------------------------------------------------------*/
 package com.karandev.io.util.console.annotation;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
+/**
+ * Annotation to mark a method as an error command in a console-based application.
+ *
+ * <p>Methods annotated with {@code @ErrorCommand} are intended to handle error scenarios
+ * or provide error-specific command functionality within the console framework.
+ *
+ * <p>Copyleft (c) 1993 by C and System Programmers Association (CSD)
+ * All Rights Free
+ *
+ * @author CSD Development Group
+ */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface ErrorCommand {
